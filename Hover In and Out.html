@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hover In/Out</title>
+    <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('img').hover(
+        function(){
+        $(this).hide();
+        $(this).attr('src',$(this).attr('src2'));
+        $(this).show();
+      }, function(){
+        $(this).hide();
+        $(this).attr('src',$(this).attr('temp'));
+        $(this).show();
+      //hover function      end line
+      })
+
+
+
+
+
+
+    //$(document).ready     end line
+    })
+    </script>
+    <style type="text/CSS">
+      *{
+        margin: 0px auto;
+        text-align:center;
+      }
+      h1{
+        margin-bottom: 50px;
+      }
+      img{
+        width:200px;
+        height:200px;
+        margin:20px;
+        border:2px solid black;
+        position:relative;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hover In/Out</h1>
+    <img src="suit1.png" src2="suit2.png" temp="suit1.png">
+    <img src="suit2.png" src2="suit1.png" temp="suit2.png">
+    <img src="suit1.png" src2="suit2.png" temp="suit1.png">
+    <img src="suit2.png" src2="suit1.png" temp="suit2.png">
+  </body>
+</html>
